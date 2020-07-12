@@ -11,9 +11,17 @@ import java.util.Map;
  * @version 1.0
  */
 public interface ActivityDao {
+    
+
     int save(Activity activity);
 
     List<Activity> getDataListByCondition(Map<String, Object> map);
 
     int getTotalByCondition(Map<String, Object> map);
+
+    int delete(String[] ids);
+
+    Activity getById(String id);
+
+    int update(Activity activity);
 }
