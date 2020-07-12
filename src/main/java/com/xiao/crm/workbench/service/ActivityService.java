@@ -2,7 +2,9 @@ package com.xiao.crm.workbench.service;
 
 import com.xiao.crm.vo.PaginationVO;
 import com.xiao.crm.workbench.domain.Activity;
+import com.xiao.crm.workbench.domain.ActivityRemark;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,4 +23,12 @@ public interface ActivityService {
     Map<String, Object> getUserListAndActivity(String id);
 
     boolean update(Activity activity);
+
+    Activity detail(String id);
+
+    List<ActivityRemark> getRemarkListByAid(String activityId);
+
+    boolean deleteRemark(String id);
+
+    boolean saveRemark(ActivityRemark ar);
 }
